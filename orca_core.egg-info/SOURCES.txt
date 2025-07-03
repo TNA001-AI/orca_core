@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+orca_core/__init__.py
+orca_core.egg-info/PKG-INFO
+orca_core.egg-info/SOURCES.txt
+orca_core.egg-info/dependency_links.txt
+orca_core.egg-info/requires.txt
+orca_core.egg-info/top_level.txt
+orca_core.egg-info/zip-safe
+resource/orca_core
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
