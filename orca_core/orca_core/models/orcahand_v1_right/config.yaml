@@ -1,6 +1,6 @@
 version: 0.2.1
 baudrate: 3000000
-port: /dev/ttyUSB0 # linux
+port: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTAA09EY-if00-port0 # linux
 # port: /dev/tty.usbserial-FT9MISJT # mac
 max_current: 400
 
@@ -14,29 +14,29 @@ joint_ids: [thumb_mcp, thumb_abd, thumb_pip, thumb_dip, index_abd, index_mcp, in
 
 # Which motor ID is physically connected to which joint
 joint_to_motor_map:
-  thumb_mcp: -1
-  thumb_abd: -2
-  thumb_pip: -4
-  thumb_dip: -3
-  index_abd: 10
-  index_mcp: -11
-  index_pip: -12
-  middle_abd: 9
-  middle_mcp: -8 
-  middle_pip: -16
-  ring_abd: -5 
-  ring_mcp: -7 
-  ring_pip: -6 
-  pinky_abd: 13
-  pinky_mcp: -15
-  pinky_pip: -14
+  thumb_mcp: 9
+  thumb_abd: 10
+  thumb_pip: 12
+  thumb_dip: 11
+  index_abd: -2
+  index_mcp: 3
+  index_pip: 4
+  middle_abd: -1
+  middle_mcp: 16
+  middle_pip: 8
+  ring_abd: 13
+  ring_mcp: 15
+  ring_pip: 14
+  pinky_abd: -5
+  pinky_mcp: 7
+  pinky_pip: 6
   wrist: 17 
 
 joint_roms:
-  thumb_mcp: [-50, 50]
-  thumb_abd: [-20, 42]
-  thumb_pip: [-12, 108]
-  thumb_dip: [-20, 112]
+  thumb_mcp: [-45, 50]
+  thumb_abd: [-62, 45]
+  thumb_pip: [-40, 70]
+  thumb_dip: [-48, 83]
   index_abd: [-37, 37]
   index_mcp: [-20, 95]
   index_pip: [-20, 108]
@@ -166,68 +166,3 @@ calib_sequence:
   - step: 28
     joints:
       wrist: extend
-# calib_sequence:
-#   - step: 1
-#     joints:
-#       thumb_mcp flex
-#   - step: 2
-#     joints:
-#       thumb_abd: flex
-#   - step: 3
-#     joints:
-#       thumb_pip: flex
-#   - step: 4
-#     joints:
-#       thumb_dip: flex
-
-#   - step: 5
-#     joints:
-#       index_abd: flex
-#   - step: 6
-#     joints:
-#       index_mcp: flex
-#   - step: 7
-#     joints:
-#       index_pip: flex
-
-#   - step: 8
-#     joints:
-#       middle_abd: flex
-#   - step: 10
-#     joints:
-#       middle_mcp: flex
-#   - step: 11
-#     joints:
-#       middle_pip: flex
-
-#   - step: 12
-#     joints:
-#       ring_abd: flex
-#   - step: 12
-#     joints:
-#       ring_mcp: flex
-#   - step: 13
-#     joints:
-#       ring_pip: flex
-
-#   - step: 14
-#     joints:   
-#       pinky_abd: flex
-#   - step: 15
-#     joints:
-#       pinky_mcp: flex
-#   - step: 16
-#     joints:
-#       pinky_pip: flex
-#   - step: 17
-#     joints:
-#       wrist: flex
-
-# calib_sequence:
-#   - step: 1
-#     joints:
-#       pinky_pip: flex
-#   - step: 2
-#     joints:
-#       pinky_pip: extend
-    

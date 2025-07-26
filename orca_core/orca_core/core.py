@@ -39,7 +39,7 @@ class OrcaHand:
         calib = read_yaml(self.calib_path)
             
         self.baudrate: int = config.get('baudrate', 3000000)
-        self.port: str = config.get('port', '/dev/ttyUSB0')
+        self.port: str = config.get('port', '/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTAA09EY-if00-port0')
         self.max_current: int = config.get('max_current', 300)
         self.control_mode: str = config.get('control_mode', 'current_position')
         self.type: str = config.get('type', None)

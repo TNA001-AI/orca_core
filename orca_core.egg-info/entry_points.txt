@@ -1,0 +1,2 @@
+[console_scripts]
+hand_controller = orca_core.orca_core.hand_controller:main
