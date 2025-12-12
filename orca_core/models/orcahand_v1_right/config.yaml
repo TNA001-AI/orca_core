@@ -1,7 +1,7 @@
 version: 0.2.1
 baudrate: 3000000
-#port: /dev/ttyUSB0 # linux
-port: /dev/tty.usbserial-FT9MISJT # mac
+port: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTAA09EY-if00-port0 # linux
+# port: /dev/tty.usbserial-FT9MISJT # mac
 max_current: 400
 
 type: right
@@ -14,23 +14,23 @@ joint_ids: [thumb_mcp, thumb_abd, thumb_pip, thumb_dip, index_abd, index_mcp, in
 
 # Which motor ID is physically connected to which joint
 joint_to_motor_map:
-  thumb_mcp: -4
-  thumb_abd: -3
-  thumb_pip: -1
-  thumb_dip: -2
-  index_abd: 14
-  index_mcp: -15
-  index_pip: -16
-  middle_abd: 13
-  middle_mcp: -8
-  middle_pip: -9
-  ring_abd: -5
-  ring_mcp: -7
-  ring_pip: -6
-  pinky_abd: 12
-  pinky_mcp: -10
-  pinky_pip: -11
-  wrist: -17
+  thumb_mcp: 9
+  thumb_abd: 10
+  thumb_pip: 12
+  thumb_dip: 11
+  index_abd: -2
+  index_mcp: 3
+  index_pip: 4
+  middle_abd: -1
+  middle_mcp: 16
+  middle_pip: 8
+  ring_abd: 13
+  ring_mcp: 15
+  ring_pip: 14
+  pinky_abd: -5
+  pinky_mcp: 7
+  pinky_pip: 6
+  wrist: 17 
 
 joint_roms:
   thumb_mcp: [-50, 50]
@@ -49,7 +49,7 @@ joint_roms:
   pinky_abd: [-37, 37]
   pinky_mcp: [-20, 98]
   pinky_pip: [-20, 108]
-  wrist: [-50, 30]
+  wrist: [-39,51]
 
 neutral_position:
   thumb_mcp: -13
@@ -75,7 +75,6 @@ calib_step_size: 0.1
 calib_step_period: 0.001
 calib_num_stable: 10  # should be period * num_stable > 1
 calib_threshold: 0.01
-
 calib_sequence:
   - step: 1
     joints:
