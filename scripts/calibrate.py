@@ -1,4 +1,5 @@
 import argparse
+import os
 from orca_core import OrcaHand
 
 def main():
@@ -9,7 +10,7 @@ def main():
         "model_path",
         type=str,
         nargs="?",
-        default=None,
+        default="/home/yolandazhu/Desktop/orca_core/orca_core/models/orcahand_v1_right",
         help="Path to the orcahand model folder (e.g., /path/to/orcahand_v1)"
     )
     args = parser.parse_args()

@@ -1,7 +1,6 @@
 version: 0.2.1
 baudrate: 3000000
-port: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTAA09EY-if00-port0 # linux
-# port: /dev/tty.usbserial-FT9MISJT # mac
+port: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTAA0B4R-if00-port0
 max_current: 400
 
 type: right
@@ -14,22 +13,22 @@ joint_ids: [thumb_mcp, thumb_abd, thumb_pip, thumb_dip, index_abd, index_mcp, in
 
 # Which motor ID is physically connected to which joint
 joint_to_motor_map:
-  thumb_mcp: 9
-  thumb_abd: 10
-  thumb_pip: 12
-  thumb_dip: 11
-  index_abd: -2
-  index_mcp: 3
-  index_pip: 4
-  middle_abd: -1
-  middle_mcp: 16
-  middle_pip: 8
-  ring_abd: 13
-  ring_mcp: 15
-  ring_pip: 14
-  pinky_abd: -5
-  pinky_mcp: 7
-  pinky_pip: 6
+  thumb_mcp: 5
+  thumb_abd: 6
+  thumb_pip: 8
+  thumb_dip: 7
+  index_abd: -14
+  index_mcp: 15
+  index_pip: 16
+  middle_abd: -13
+  middle_mcp: -12
+  middle_pip: -4
+  ring_abd: 1
+  ring_mcp: 3
+  ring_pip: 2
+  pinky_abd: -9
+  pinky_mcp: 11
+  pinky_pip: 10
   wrist: 17 
 
 joint_roms:
